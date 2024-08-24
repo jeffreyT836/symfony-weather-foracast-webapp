@@ -18,5 +18,5 @@
 /phpunit.xml
 ###< symfony/phpunit-bridge ###
 
-./.idea
+.idea
 /assets/vendor
