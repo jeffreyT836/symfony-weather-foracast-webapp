@@ -5,5 +5,15 @@ controllers:
     type: attribute
 
 weather_highlander_says:
-    path: /weather/highlander-says
+    path: /weather/highlander-says/{threshold}
+    methods: ['GET', 'POST']
+    defaults:
+        threshold: 50
+    requirements:
+        threshold: \d+
     controller: App\Controller\WeatherController::highlanderSays
+
+weather_highlander_says_guess:
+    path: /weather/highlander-says/{guess}
+    methods: ['GET', 'POST']
+    controller: App\Controller\WeatherController::highlanderSaysGuess
